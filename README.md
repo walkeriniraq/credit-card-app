@@ -3,6 +3,8 @@ credit-card-app
 This is just a small application I've put together to test javascript TDD using jasmine and coffeescript. There is a
 small sinatra application mostly existing to automatically compile my coffeescript into javascript.
 
+Since "application" has two meanings in this case, I'm calling the credit card application object a "form"
+
 Instructions
 ============
 Test the server with "rspec spec"
@@ -12,13 +14,6 @@ Run the server with "ruby server.rb" or "jruby server.rb" (only tested with jrub
 Run the [jasmine tests](http://localhost:4567/test)
 
 Run the [demo](http://localhost:4567/demo)
-
-Things to do
-============
-1.  Make it compatible with bundler
-2.  Come up with some objects & interfaces
-3.  Test the objects and interfaces
-4.  Build into a demo
 
 Objects
 =======
@@ -56,3 +51,4 @@ Student_Income
 Useful stuff & Links
 ====================
 [Javascript frameworks list](http://codebrief.com/2012/01/the-top-10-javascript-mvc-frameworks-reviewed/)
+[Ember js objects](http://www.cerebris.com/blog/2012/03/06/understanding-ember-object/)
