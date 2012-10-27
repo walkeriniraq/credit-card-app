@@ -1,9 +1,4 @@
-is_valid = ->
-  false
-
-first_name = null
-  
-window.CC_Application = {
-  is_valid: is_valid
-  first_name: first_name
-}
+CC_Application = Ember.Application.create(
+  ready: ->
+    alert "Ember is working"
+)
