@@ -1,1 +1,10 @@
-<div id="mainDiv">Hello World</div>
+<div class="who_data">
+  <div class="name">
+    First Name: {{ view Ember.TextField valueBinding="form.who_info.first_name" }}
+    Last Name: {{ view Ember.TextField valueBinding="form.who_info.last_name" }}
+  </div>
+  Birthdate: {{ view Ember.TextField valueBinding="form.who_info.birth_data" }}
+  Social Security Number: {{ view Ember.TextField valueBinding="form.who_info.ssn" }}
+  Mother's Maiden Name: {{ view Ember.TextField valueBinding="form.who_info.mother_maiden_name" }}
+</div>
+{{#view CC_Application.submitButton}}Submit Form{{/view}}

@@ -20,9 +20,6 @@ describe "CC_Application", ->
   it 'should have a form view', ->
     expect(CC_Application.FormView).toBeDefined()
 
-#  it 'should load the form view', ->
-
-
   describe "formController", ->
     it 'should have a form_info object', ->
       expect(CC_Application.formController.form_info).toBeDefined()

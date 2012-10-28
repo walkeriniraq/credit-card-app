@@ -40,26 +40,49 @@ CC_Application.formController = Ember.ObjectController.create(
   form_info: null
   init: ->
     this.form_info = CC_Application.FormInfo.create()
+  get_data_as_json: ->
+    {
+      first_name: this.form_info.who_info.first_name
+      last_name: this.form_info.who_info.last_name
+    }
 )
 
 #########################################
 # Views
 #########################################
+CC_Application.submitButton = Ember.View.extend(
+  click: (evt) ->
+    alert JSON.stringify(CC_Application.formController.get_data_as_json())
+)
+
+template_error = false
 TemplateLoader.initialize(
   "/templates/cc_app.handlebars"
   (template) ->
     CC_Application.FormView = Ember.View.create(
       template: template
+      form: CC_Application.formController.form_info
     )
-    CC_Application.FormView.append()
-
   (error) ->
     alert "Error loading application template: #{error}"
+    template_error = true
 )
 
 #########################################
 # Init
 #########################################
 CC_Application.initialize()
+
+CC_Application.wait_for_load = (callback) ->
+  if CC_Application.FormView
+    return
+  waitfn = setInterval(
+    ->
+      if CC_Application.FormView
+        clearInterval(waitfn)
+        callback()
+        return
+    100
+  )
 
 window.CC_Application = CC_Application

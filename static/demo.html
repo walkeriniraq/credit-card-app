@@ -8,6 +8,13 @@
   <script type="text/javascript" src="lib/ember.js"></script>
   <script type="text/javascript" src="lib/template_loader.js"></script>
   <script type="text/javascript" src="lib/cc_application.js"></script>
+
+  <script type="text/javascript">
+    CC_Application.wait_for_load(function() {
+      CC_Application.FormView.append();
+    });
+  </script>
+
 </head>
 
 <body>
