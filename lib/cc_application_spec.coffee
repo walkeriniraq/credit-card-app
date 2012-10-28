@@ -14,6 +14,14 @@ describe "CC_Application", ->
   it 'should be able to create a WhoInfo object', ->
     expect(CC_Application.WhoInfo.create()).not.toBeNull()
 
+  it 'should have a formController', ->
+    expect(CC_Application.formController).toBeDefined()
+
+  describe "formController", ->
+    it 'should have a form_info object', ->
+      expect(CC_Application.formController.form_info).toBeDefined()
+      expect(CC_Application.formController.form_info).not.toBeNull()
+
   # this holds the entire form object
   describe "FormInfo", ->
     beforeEach ->

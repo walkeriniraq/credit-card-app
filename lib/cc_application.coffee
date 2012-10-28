@@ -1,5 +1,11 @@
+#########################################
+# Application
+#########################################
 CC_Application = Ember.Application.create()
 
+#########################################
+# Models
+#########################################
 CC_Application.FormInfo = Ember.Object.extend(
   who_info: null
   where_info: null
@@ -27,6 +33,23 @@ CC_Application.WhoInfo = Ember.Object.extend(
   mother_maiden_name: null
 )
 
+#########################################
+# Controllers
+#########################################
+CC_Application.formController = Ember.ObjectController.create(
+  form_info: null
+  init: ->
+    this.form_info = CC_Application.FormInfo.create()
+)
+
+#########################################
+# Views
+#########################################
+
+
+#########################################
+# Init
+#########################################
 CC_Application.initialize()
 
 window.CC_Application = CC_Application
