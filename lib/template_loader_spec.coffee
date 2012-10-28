@@ -1,8 +1,4 @@
 describe "TemplateLoader", ->
-  it 'is created without any templates loaded', ->
-    expect(TemplateLoader.templates).toBeDefined()
-    expect(TemplateLoader.templates).not.toBeNull()
-    expect(TemplateLoader.templates.count()).toBe(0)
 
   describe 'load_template', ->
     it 'calls the error callback if the template is not present', ->
