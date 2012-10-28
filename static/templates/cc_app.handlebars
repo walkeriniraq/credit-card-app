@@ -1,28 +1,47 @@
 <div id="who_data">
-  <div class="name row-fluid">
-    <span class="span2">First and last name:</span>
-    <span class="span7">
+  <h1>Easy Co Credit Card application</h1>
+  Please fill in all of the following information so that we can process your application.
+  <h4>Information about you</h4>
+
+  <div class="row-fluid">
+    <div class="span2">
+      <label>First name</label>
       {{ view Ember.TextField valueBinding="form.who_info.first_name" }}
+    </div>
+    <div class="span2">
+      <label>Last name</label>
       {{ view Ember.TextField valueBinding="form.who_info.last_name" }}
-    </span>
+    </div>
   </div>
-  <div class="name row-fluid">
-    <span class="span2">Birthdate:</span>
-    <span class="span7">
-      {{ view Ember.TextField valueBinding="form.who_info.birth_data" }}
-    </span>
+
+  <label>Birthdate</label>
+  {{ view Ember.TextField id="birthdate" valueBinding="form.who_info.birth_date" class="datepicker input-small" }}
+
+  <label>Social Security Number</label>
+  {{ view Ember.TextField id="ssn" valueBinding="form.who_info.ssn" class="input-small" }}
+
+  <label>Mother's Maiden Name</label>
+  {{ view Ember.TextField valueBinding="form.who_info.mother_maiden_name" }}
+
+  <h4>Where you live</h4>
+
+  <label>Street</label>
+  {{ view Ember.TextField valueBinding="form.where_info.street" class="input-xxlarge" }}
+
+  <div class="row-fluid">
+    <div class="span2">
+      <label>City</label>
+      {{ view Ember.TextField valueBinding="form.where_info.city" }}
+    </div>
+    <div class="span1">
+      <label>State</label>
+      {{ view Ember.TextField id="state" valueBinding="form.where_info.state" class="input-mini" }}
+    </div>
+    <div class="span1">
+      <label>Zip code</label>
+      {{ view Ember.TextField id="zipcode" valueBinding="form.where_info.zip" class="input-small" }}
+    </div>
   </div>
-  <div class="name row-fluid">
-    <span class="span2">Social Security Number:</span>
-    <span class="span7">
-      {{ view Ember.TextField valueBinding="form.who_info.ssn" }}
-    </span>
-  </div>
-  <div class="name row-fluid">
-    <span class="span2">Mother's Maiden Name:</span>
-    <span class="span7">
-      {{ view Ember.TextField valueBinding="form.who_info.mother_maiden_name" }}
-    </span>
-  </div>
+
   <div class="btn" {{action "submit"}}>Submit Form</div>
 </div>

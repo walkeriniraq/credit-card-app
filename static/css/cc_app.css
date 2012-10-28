@@ -1,3 +1,7 @@
 #who_data {
     margin: 20px;
 }
+
+#name_row {
+    display: block;
+}
