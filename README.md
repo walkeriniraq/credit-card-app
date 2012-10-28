@@ -5,8 +5,13 @@ small sinatra application mostly existing to automatically compile my coffeescri
 
 Since "application" has two meanings in this case, I'm calling the credit card application object a "form"
 
+I'm using rspec to test the server script and jasmine to test the javascript app. The app is constructed using
+Ember, a fairly new MVC framework that runs on jquery and uses "handlebars" for templating.
+
 Instructions
 ============
+Run bundle install
+
 Test the server with "rspec spec"
 
 Run the server with "ruby server.rb" or "jruby server.rb" (only tested with jruby)
@@ -15,40 +20,9 @@ Run the [jasmine tests](http://localhost:4567/test)
 
 Run the [demo](http://localhost:4567/demo)
 
-Objects
-=======
-CC_Application
---------------
-* first_name
-* last_name
-* phone_number
-* email_address
-* street_address
-* birth_date
-* ssn
-* mother_maiden_name
-* income_type
-* income
-	
-US_Address
-----------
-*	street
-*	city
-*	state
-*	zip
-	
-Employed_Income
----------------
-*	employer_name
-*	income_per_year
-
-Student_Income
---------------
-*	school_name
-*	school_level
-
-
 Useful stuff & Links
 ====================
 [Javascript frameworks list](http://codebrief.com/2012/01/the-top-10-javascript-mvc-frameworks-reviewed/)
 [Ember js objects](http://www.cerebris.com/blog/2012/03/06/understanding-ember-object/)
+[Jasmine testing ajax](http://damaneice.blogspot.com/2011/11/using-jasmine-to-test-jquery-ajax.html)
+[Testing ember views](http://shairez.com/2012/07/ember-js-tdd-how-to-test-your-ember-views/)

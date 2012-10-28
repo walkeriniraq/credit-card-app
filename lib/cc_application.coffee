@@ -45,7 +45,17 @@ CC_Application.formController = Ember.ObjectController.create(
 #########################################
 # Views
 #########################################
+TemplateLoader.initialize(
+  "/templates/cc_app.handlebars"
+  (template) ->
+    CC_Application.FormView = Ember.View.create(
+      template: template
+    )
+    CC_Application.FormView.append()
 
+  (error) ->
+    alert "Error loading application template: #{error}"
+)
 
 #########################################
 # Init
