@@ -32,7 +32,7 @@ Included code
 * [jQuery 1.8.1](http://jquery.com/)
 * [Ember JS 1.0.0-PRE.2](http://emberjs.com/)
 * [Datepicker for bootstrap](http://www.eyecon.ro/bootstrap-datepicker/)
-* [Jasmine 1.2.0](http://pivotal.github.com/jasmine/)
+* [Jasmine 1.2.0](https://jasmine.github.io/)
 * [Handlebars 1.0rc1](http://handlebarsjs.com/)
 
 Ruby Gems
